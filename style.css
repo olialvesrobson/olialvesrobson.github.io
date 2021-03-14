@@ -1,0 +1,165 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    display: block;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+
+}
+
+.container {
+    display: grid;
+    min-width: 80vw;
+    height: 95vw;
+
+    background-color: #e5e5e536;
+}
+
+
+.headerImg {
+    display: flex;
+    
+}
+
+.headerImg.image {
+    object-fit: fill;
+    
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    min-height: 60px;
+    border-bottom: 1px;
+    padding-left: 40px;
+    padding-right: 40px;
+    justify-content: space-between;
+}
+
+.navbarItem i {
+    color: #fe881e;
+    font-size: small;
+    padding: 15px;
+    text-transform: uppercase;
+}
+
+.navbarItem a:link {
+    text-decoration: none;
+}
+
+.navbarItem a:visited {
+    color: #fe881e;
+}
+
+.navbarItem i:hover {
+    background-color: #8c8c8c;
+    font-size: larger;
+
+}
+.navbarLogo i {
+    color: #64acc5;
+    font-size: larger;
+    padding: 8px;
+    justify-self: start;
+}
+
+.dashboard {
+    display: block;
+}
+
+.dashboardGrid {
+    display: grid;
+    grid-template: 
+    'center center center center center center' 
+    'left left right right right right';
+}
+
+.columnCenter {
+    grid-area: center;
+}
+
+.columnLeft {
+    grid-area: left;
+    padding: 20px;
+    border-right: 1px solid #555555;
+}
+
+.columnRight {
+    grid-area: right;
+    padding: 20px;
+}
+
+.containerTextSummary {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    border-bottom: 1px solid #55555529;
+}
+
+.containerTextSummary h2 {
+    text-align: center;
+}
+
+.containerTextSummary p {
+    
+    text-align: justify;
+    font-size: large;
+    letter-spacing: 3px;
+    width: 80%;
+}
+
+.containerTextSummary b {
+    color: #64acc5;
+}
+
+.colorWhiteGrey {
+    color: #e5e5e5;
+    text-transform: capitalize;
+}
+
+.colorLightGrey {
+    color: #8c8c8c;
+}
+
+.colorDarkGrey {
+    color: #555555;
+}
+
+.colorOrange {
+    color: #fe881e;
+}
+
+.colorBlue {
+    color: #64acc5;
+}
+
+.colorGreen {
+    color: #679f16;
+}
+
+.bkgColorWhiteGrey {
+    background-color: #e5e5e5;
+}
+
+.bkgColorLightGrey {
+    background-color: #8c8c8c;
+}
+
+.bkgColorDarkGrey {
+    background-color: #555555;
+}
+
+.bkgColorOrange {
+    background-color: #fe881e;
+}
+
+.bkgColorBlue {
+    background-color: #64acc5;
+}
+
+.bkgColorGreen {
+    background-color: #679f16;
+}

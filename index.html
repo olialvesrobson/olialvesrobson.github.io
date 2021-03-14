@@ -1,12 +1,58 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Viewport for responsive web design -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <!-- Meta Description -->
+    <meta name="Robson Oliveira Alves" content="That's my own page. ">
+
+    <link rel="stylesheet" href="style.css">
     <title>Robson Oliveira Alves - The page</title>
 </head>
 <body>
-    <h3>Welcome to my page</h3>
+    <div class="container">
+        <div>
+            <!-- HEADER -->
+            <div class="header">
+                <div class="headerImg">
+                    <img src="images/RobsonMainPage.jpeg" style="display: block; object-fit: cover;
+                    width: 95vw; max-height: 400px;" alt="" />
+                    
+                    <!--https://as1.ftcdn.net/jpg/03/14/79/32/500_F_314793236_K5Gze4xBbGGV3VgFeCKkPzDV6wLEkl7u.jpg -->
+                </div>
+                <div class="navbar bkgColorDarkGrey">
+                        <div class="navbarLogo">
+                            <i>Robson O. Alves</i>
+                        </div>
+                        <div class="navbarItem">
+                            <i><a href="#">About me</a></i>
+                            <i><a href="#">Portfolio</a></i>
+                            <i><a href="#">Contact</a></i>
+                            
+                        </div>
+                        
+                </div>
+            </div>
+
+            <!-- DASHBOARD -->
+            <div class="dashboard">
+                <div class="containerTextSummary" >
+                    
+                    <!-- Text is set by javascript getSummary() from resumeContent.js -->
+                    <p id="setSummary" class="colorDarkGrey"></p>
+                </div>
+
+            </div>
+        </div>
+
+        
+            
+    </div>
+
+
+    <script src="resumeContent.js"></script>
 </body>
 </html>
