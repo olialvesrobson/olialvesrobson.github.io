@@ -1,58 +1,353 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html>
+<title>Robson - on my way to success</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    
-    <!-- Viewport for responsive web design -->
-    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-    <!-- Meta Description -->
-    <meta name="Robson Oliveira Alves" content="That's my own page. ">
-
-    <link rel="stylesheet" href="style.css">
-    <title>Robson Oliveira Alves - The page</title>
+    <style>
+        body {
+            color: #333;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+        h2 {
+            color: #6474E5;
+        }
+        .navbar {
+            background-color: #286FB493;
+        }
+        .navbar > a{
+            background-color: #286FB493;
+            color: #B0DDE4;
+        }
+        .w3-xlarge {
+            color: #fff;
+        }
+        .aboutme {
+            background-image: linear-gradient(transparent 40%, #E2F0F9a9 75%), url('https://images.unsplash.com/photo-1531297484001-80022131f5a1?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1307&q=80');
+        }
+        .aboutme-text {
+            color: #E2F0F9;
+        }
+        .experiences {
+            background-color: #B0DDE4;
+            padding: 20px;
+        }
+        .subexperiences > span {
+            display: inline-flex;
+            padding: 4px;
+            border-radius: 3px;
+            background-color: #E2F0F9;
+            margin: 4px;
+        }
+    </style>
 </head>
-<body>
-    <div class="container">
-        <div>
-            <!-- HEADER -->
-            <div class="header">
-                <div class="headerImg">
-                    <img src="images/RobsonMainPage.jpeg" style="display: block; object-fit: cover;
-                    width: 95vw; max-height: 400px;" alt="" />
-                    
-                    <!--https://as1.ftcdn.net/jpg/03/14/79/32/500_F_314793236_K5Gze4xBbGGV3VgFeCKkPzDV6wLEkl7u.jpg -->
-                </div>
-                <div class="navbar bkgColorDarkGrey">
-                        <div class="navbarLogo">
-                            <i>Robson O. Alves</i>
-                        </div>
-                        <div class="navbarItem">
-                            <i><a href="#">About me</a></i>
-                            <i><a href="#">Portfolio</a></i>
-                            <i><a href="#">Contact</a></i>
-                            
-                        </div>
-                        
-                </div>
-            </div>
 
-            <!-- DASHBOARD -->
-            <div class="dashboard">
-                <div class="containerTextSummary" >
-                    
-                    <!-- Text is set by javascript getSummary() from resumeContent.js -->
-                    <p id="setSummary" class="colorDarkGrey"></p>
-                </div>
+<body id="myPage">
 
-            </div>
-        </div>
+<!-- Sidebar on click -->
+<nav class="w3-sidebar w3-bar-block w3-white w3-card w3-animate-left w3-xxlarge" style="display:none;z-index:2" id="mySidebar">
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-display-topright w3-text-teal">Close
+    <i class="fa fa-remove"></i>
+  </a>
+  <a href="#" class="w3-bar-item w3-button">Link 1</a>
+  <a href="#" class="w3-bar-item w3-button">Link 2</a>
+  <a href="#" class="w3-bar-item w3-button">Link 3</a>
+  <a href="#" class="w3-bar-item w3-button">Link 4</a>
+  <a href="#" class="w3-bar-item w3-button">Link 5</a>
+</nav>
 
-        
-            
+<!-- Navbar -->
+<div class="w3-top">
+ <div class="w3-bar w3-left-align navbar">
+  <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-hover-white " href="javascript:void(0);" onclick="openNav()"><i class="fa fa-bars"></i></a>
+  <a href="#" class="w3-bar-item w3-button w3-teal"><i class="fa fa-home w3-margin-right"></i>Home</a>
+  <a href="#team" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Resume</a>
+  <a href="#work" class="w3-bar-item w3-button w3-hide-small w3-hover-white">My works</a>
+  <a href="#pricing" class="w3-bar-item w3-button w3-hide-small w3-hover-white">About me</a>
+  <a href="#contact" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Contact</a>
+    <div class="w3-dropdown-hover w3-hide-small">
+    <button class="w3-button" title="Notifications">Extra<i class="fa fa-caret-down"></i></button>     
+    <div class="w3-dropdown-content w3-card-4 w3-bar-block">
+      <a href="#" class="w3-bar-item w3-button">Awards</a>
+    </div>
+  </div>
+  <a href="#" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-teal" title="Search"><i class="fa fa-search"></i></a>
+ </div>
+
+  <!-- Navbar on small screens -->
+  <div id="navDemo" class="w3-bar-block w3-theme-d2 w3-hide w3-hide-large w3-hide-medium">
+    <a href="#team" class="w3-bar-item w3-button">Team</a>
+    <a href="#work" class="w3-bar-item w3-button">Work</a>
+    <a href="#pricing" class="w3-bar-item w3-button">Price</a>
+    <a href="#contact" class="w3-bar-item w3-button">Contact</a>
+    <a href="#" class="w3-bar-item w3-button">Search</a>
+  </div>
+</div>
+
+<!-- Image Header -->
+<div class="w3-display-container w3-animate-opacity">
+  <img src="/img/mainpage.jpeg" alt="boat" style="width:100%;min-height:350px;max-height:600px;">
+  <div class="w3-container w3-display-bottomleft w3-margin-bottom">  
+    <button 
+        onclick="document.getElementById('id01').style.display='block'" 
+        class="w3-button w3-xlarge w3-theme w3-hover-teal" 
+        title="I wanto to get in touch">CONTACT ME NOW</button>
+  </div>
+</div>
+
+<!-- Modal -->
+<div id="id01" class="w3-modal">
+  <div class="w3-modal-content w3-card-4 w3-animate-top">
+    <header class="w3-container w3-teal w3-display-container"> 
+      <span onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-teal w3-display-topright"><i class="fa fa-remove"></i></span>
+      <h4>Oh snap! We just showed you a modal..</h4>
+      <h5>Because we can <i class="fa fa-smile-o"></i></h5>
+    </header>
+    <div class="w3-container">
+      <p>Cool huh? Ok, enough teasing around..</p>
+      <p>Go to our <a class="w3-text-teal" href="/w3css/default.asp">W3.CSS Tutorial</a> to learn more!</p>
+    </div>
+    <footer class="w3-container w3-teal">
+      <p>Modal footer</p>
+    </footer>
+  </div>
+</div>
+
+<!-- Team Container -->
+<div class="w3-container w3-padding-64 w3-center aboutme" id="team">
+    <h2>Hi, I'm Robbie <b>;)</b></h2>
+    <div class="w3-center" style="display: block; padding-left: 80px; padding-right: 80px">
+        <p class='aboutme-text'>Results-oriented and creative thinker with a solid background in IT systems across automation, business analyst/intelligence, 
+            and process improvement, focusing on reducing human efforts and efficiency of resources while improving a culture for sustainable technical planning.</p>
+        <p class='aboutme-text'>Currently, developing websites and web applications with ReactJS and learning React Native for mobile applications.</p>
     </div>
 
 
-    <script src="resumeContent.js"></script>
+    <div class="w3-row"><br>
+
+    <div class="w3-third">
+        <img src="/img/robson-marriage.jpeg" alt="Robson" style="width:45%" class="w3-circle w3-hover-opacity">
+        <h3>Marriage</h3>
+        <p>with a lovely woman since 2014</p>
+    </div>
+    <div class="w3-third">
+        <img src="/img/robson-playmusics.jpg" alt="Robson" style="width:45%" class="w3-circle w3-hover-opacity">
+        <h3>Play Musics</h3>
+        <p>Guitar, Keyboard, and Cajon</p>
+    </div>
+    <div class="w3-third">
+        <img src="/img/robson-profile.jpeg" alt="Robson" style="width:45%" class="w3-circle w3-hover-opacity">
+        <h3>Self-learner</h3>
+        <p>Easily learn a new tecnology</p>
+    </div>
+    
+
+    </div>
+</div>
+
+<!-- Work Row -->
+<div class="w3-column-padding experiences" id="work">
+
+    <div class="w3-margin-64 w3-padding-24 w3-center">
+        <p>I am a Developer with good working experience of a variety of programming languages. I have ability to learn new
+            technologies quickly and thrive when working in a fast-paced team environment. Results-oriented and quick thinker, 
+            I have a solid background in IT systems across automation in a variety of programming languages such as VBA, C# and, 
+            Python, data analysis using tools such as Alteryx and Tableau, process improvement focused on increasing automation 
+            and efficiency, while contributing to a culture of sustainable technical planning keeping abreast of the latest 
+            technologies and trends.</p>
+    </div>
+    <div class="w3-row-padding">
+        <div class="w3-third">
+            <div class="w3-card w3-white w3-center">
+                <img src="/img/robson-bitools.jpeg" alt="Snow" style="width:150px; height: 150px; border-radius: 50%;">
+                <div class="w3-container subexperiences">
+                    <h3>Skills</h3>
+                    <span>ICT Business Analysis</span>
+                    <span>Data Analysis</span>
+                    <span>Problem Solving</span>
+                    <span>Leadership</span>
+                    <span>Project Management</span>
+                    <span>Interpersonal Skills</span>
+                    <span>Creative</span>
+                    <span>Collaboration</span>  
+                    
+                </div>
+            </div>
+        </div>
+
+        <div class="w3-third">
+            <div class="w3-card w3-white w3-center">
+                <img src="/img/robson-languages.jpeg" alt="Lights" style="width:150px; height: 150px; border-radius: 50%;">
+                <div class="w3-container subexperiences">
+                    <h3>Technical proficiency</h3>
+                    <span>MS Access/Excel (VBA)</span>
+                    <span>SharePoint</span>
+                    <span>MS SQL Server</span>
+                    <span>Tableau Desktop</span>
+                    <span>Alteryx</span>
+                    <span>Python (Data Analytics and TkInter)</span>
+                    <span>HTML, CSS, JavaScript</span>
+                    <span>C#</span>
+                    <span>PHP</span>
+                    <span>ReactJS</span>
+                    <span>React Native</span>
+                    <span>NodeJS</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="w3-third">
+            <div class="w3-card w3-white w3-center">
+                <img src="/img/robson-cloudplatforms.jpeg" alt="Mountains" style="width:150px; height: 150px; border-radius: 50%;">
+                <div class="w3-container subexperiences">
+                    <h3>Performance</h3>
+                    <span>2018 - Semi-finalist of 'People Who Makes the Diference'</span>
+                    <span>2017 - top 10% of analysts</span>
+                    <span>2016 - top 15% of analysts </span>
+                    <span>2014 - top 15% of analysts</span>
+                </div>
+            </div>
+        </div>    
+    </div>
+    
+
+</div>
+
+<!-- Pricing Row -->
+<div class="w3-row-padding w3-center w3-padding-64" id="pricing">
+    <h2>MY WORKS</h2>
+    <p>3 example projects.</p><br>
+    <div class="w3-third w3-margin-bottom">
+      <ul class="w3-ul w3-border w3-hover-shadow">
+        <li class="" style="background-color: #4EA1D3; color: aliceblue;">
+          <p class="w3-xlarge">REACT JS</p>
+        </li>
+        <li class="w3-padding-16"><b>Authentication</b> Email & Password</li>
+        <li class="w3-padding-16"><b>Auth</b> Email & Password</li>
+        <li class="w3-padding-16"><b>Non-SQL</b> Firestore</li>
+        <li class="w3-padding-16"><b></b></li>
+        <li class="w3-theme-l5 w3-padding-24">
+          <button class="w3-button w3-teal w3-padding-large"><i class="fa fa-check"></i> GitHub</button>
+        </li>
+      </ul>
+    </div>
+
+    <div class="w3-third w3-margin-bottom">
+      <ul class="w3-ul w3-border w3-hover-shadow">
+        <li class="" style="background-color: #4EA1D3; color: aliceblue;">
+          <p class="w3-xlarge">REACT NATIVE</p>
+        </li>
+        <li class="w3-padding-16"><b>Auth</b> Email & Password</li>
+        <li class="w3-padding-16"><b>Redux</b></li>
+        <li class="w3-padding-16"><b>Non-SQL</b> Firestore</li>
+        <li class="w3-padding-16"><b></b></li>
+        <li class="w3-theme-l5 w3-padding-24">
+          <button class="w3-button w3-teal w3-padding-large"><i class="fa fa-check"></i> GitHub</button>
+        </li>
+      </ul>
+    </div>
+
+    <div class="w3-third w3-margin-bottom">
+      <ul class="w3-ul w3-border w3-hover-shadow">
+        <li class="" style="background-color: #4EA1D3; color: aliceblue;">
+          <p class="w3-xlarge">REACT JS</p>
+        </li>
+        <li class="w3-padding-16"><b>Front-End</b> Service booking</li>
+        <li class="w3-padding-16"><b>Auth</b> Email & Password</li>
+        <li class="w3-padding-16"><b>Non-SQL</b> Firestore</li>
+        <li class="w3-padding-16"><b></b></li>
+        <li class="w3-theme-l5 w3-padding-24">
+          <button class="w3-button w3-teal w3-padding-large"><i class="fa fa-check"></i> GitHub</button>
+        </li>
+      </ul>
+    </div>
+</div>
+
+<!-- Container -->
+<div class="w3-container" style="position:relative">
+    <a onclick="w3_open()" class="w3-button w3-xlarge w3-circle w3-teal"
+    style="position:absolute;top:-28px;right:24px">+</a>
+  </div>
+
+<!-- Contact Container -->
+<div class="w3-container w3-padding-64 w3-theme-l5" id="contact" 
+    style="background-image: url('https://images.unsplash.com/photo-1555371363-27a37f8e8c46?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1350&q=80');">
+  <div class="w3-row">
+    <div class="w3-col m4 " style="padding: 12px; background-color: #ffffffa9">
+        <div class="w3-padding-24"><span class="w3-xlarge w3-border-teal w3-bottombar">Contact Us</span></div>
+        <h3>Address</h3>
+        <p>Swing by for a cup of coffee, or whatever.</p>
+        <p><i class="fa fa-map-marker w3-text-teal w3-xlarge"></i>  Mosman, 2088, NSW</p>
+        <p><i class="fa fa-phone w3-text-teal w3-xlarge"></i>  +61 452 553 487</p>
+        <p><i class="fa fa-envelope-o w3-text-teal w3-xlarge"></i>  olialves.robson@gmail.com</p>
+    </div>
+    <div class="w3-col m6 w3-right">
+      <form class="w3-container w3-card-4 w3-padding-16 " style="background-color: #ffffffa9" action="/action_page.php" target="_blank">
+      <div class="w3-section">      
+        <label>Name</label>
+        <input class="w3-input" type="text" name="Name" required>
+      </div>
+      <div class="w3-section">      
+        <label>Email</label>
+        <input class="w3-input" type="text" name="Email" required>
+      </div>
+      <div class="w3-section">      
+        <label>Message</label>
+        <input class="w3-input" type="text" name="Message" required>
+      </div>  
+      <input class="w3-check" type="checkbox" checked name="Like">
+      <label>I Like it!</label>
+      <button type="submit" class="w3-button w3-right w3-theme">Send</button>
+      </form>
+    </div>
+  </div>
+</div>
+
+<!-- Image of location/map -->
+<img src="" class="w3-image w3-greyscale-min" style="width:100%;">
+
+<!-- Footer -->
+<footer class="w3-container w3-padding-32 w3-theme-d1 w3-center">
+  <h4>Follow Me</h4>
+  <a class="w3-button w3-large w3-teal" href="ttp://www.linkedIn.com/in/olialves-robson" title="LinkedIn"><i class="fa fa-linkedin"></i></a>
+  <a class="w3-button w3-large w3-teal" href="https://www.facebook.com/robson.rasilva" title="Facebook"><i class="fa fa-facebook"></i></a>
+  <a class="w3-button w3-large w3-teal" href="https://www.instagram.com/robsonolialves" title="Instagram"><i class="fa fa-instagram"></i></a>
+
+  <div style="position:relative;bottom:100px;z-index:1;" class="w3-tooltip w3-right">
+    <span class="w3-text w3-padding w3-teal w3-hide-small">Go To Top</span>   
+    <a class="w3-button w3-theme" href="#myPage"><span class="w3-xlarge">
+    <i class="fa fa-chevron-circle-up"></i></span></a>
+  </div>
+</footer>
+
+<script>
+// Script for side navigation
+function w3_open() {
+  var x = document.getElementById("mySidebar");
+  x.style.width = "300px";
+  x.style.paddingTop = "10%";
+  x.style.display = "block";
+}
+
+// Close side navigation
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+}
+
+// Used to toggle the menu on smaller screens when clicking on the menu button
+function openNav() {
+  var x = document.getElementById("navDemo");
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else { 
+    x.className = x.className.replace(" w3-show", "");
+  }
+}
+</script>
+
 </body>
 </html>
